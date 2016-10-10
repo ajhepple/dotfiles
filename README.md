@@ -8,3 +8,5 @@ Simply drop the dot and link to the local working copy;
 
 ## Notable omissions
 1. The `~/.vim` directory. It has its very own repository.
+2. The `~/.grails` directory. I have not yet fully understood its purpose.
+3. Tomboy config.
