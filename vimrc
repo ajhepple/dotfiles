@@ -114,3 +114,7 @@ set wildignore+=*.class,*.so,*.swp
 " Automatic spell checking of certain file types
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
+
+" Finding files
+set path+=**
+set wildmenu
