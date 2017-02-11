@@ -118,3 +118,9 @@ autocmd FileType gitcommit setlocal spell
 " Finding files
 set path+=**
 set wildmenu
+
+" Move between vim panes
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
