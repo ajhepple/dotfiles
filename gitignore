@@ -1,0 +1,11 @@
+# Global gitignore file
+#
+# ln -s ~/workspace/dotfiles/gitignore ~/.gitignore
+# git config --global core.excludesfile '~/.gitignore'
+
+# Vim swap files
+**/*/.*.swp
+
+# Editor autosave files
+*~
+**/*~
