@@ -21,6 +21,15 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# --------------------Mac OS specific section ---------------------------------
+# MacPorts Installer addition on 2013-05-04_at_14:49:46: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# --------------------End of Mac OS specific section --------------------------
+
+# Remove all of the annoying .DS_Store files that were created
+# since I last used Terminal on MacOS
+find ~/ -name .DS_Store -delete
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/anthony/.sdkman"
-[[ -s "/home/anthony/.sdkman/bin/sdkman-init.sh" ]] && source "/home/anthony/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
