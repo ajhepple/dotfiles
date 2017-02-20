@@ -1,7 +1,10 @@
 # Global gitignore file
 #
-# ln -s ~/workspace/dotfiles/gitignore ~/.gitignore
-# git config --global core.excludesfile '~/.gitignore'
+# Is referenced directly from my global Git config file so no further
+# installation is necessary if using the the global config. For independent
+# use;
+#
+# git config --global core.excludesfile '<path_to_repo>/dotfiles/gitignore'
 
 # Vim swap files
 **/*/.*.swp
