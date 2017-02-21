@@ -56,15 +56,16 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # ------------------ MAC OS Specific Section ----------------------------------
+if [[ "$(uname)" = Darwin* ]]; then
+ 
+    # MacPorts Installer addition on 2013-05-04_at_15:48:49:
+    # adding an appropriate PATH variable for use with MacPorts.
+    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-# MacPorts Installer addition on 2013-05-04_at_15:48:49: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-# Make Mac OS Finder show/hide hidden files
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'; 
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'; 
-
+    # Make Mac OS Finder show/hide hidden files
+    alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'; 
+    alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'; 
+fi
 # -------------End of MAC OS Specific Section ----------------------------------
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

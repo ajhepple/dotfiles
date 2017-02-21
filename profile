@@ -22,13 +22,18 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # --------------------Mac OS specific section ---------------------------------
-# MacPorts Installer addition on 2013-05-04_at_14:49:46: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# --------------------End of Mac OS specific section --------------------------
+if [[ "$(uname)" = Darwin* ]]; then
 
-# Remove all of the annoying .DS_Store files that were created
-# since I last used Terminal on MacOS
-find ~/ -name .DS_Store -delete
+    # MacPorts Installer addition on 2013-05-04_at_14:49:46: 
+    # adding an appropriate PATH variable for use with MacPorts.
+    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+    # Remove all of the annoying .DS_Store files that were created
+    # since I last used Terminal on MacOS
+    find ~/ -name .DS_Store -delete
+
+fi
+# --------------------End of Mac OS specific section --------------------------
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
