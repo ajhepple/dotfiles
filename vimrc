@@ -124,3 +124,16 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
+
+" Use Ctrl-S to save
+" NB this requires that C-s is not captured by the terminal. This can be
+" achieved by aliasing vim in ~/.bash_profile as follows:
+" alias vim='stty -ixon;vim'
+noremap <C-s> :update<CR>
+inoremap <C-s> <ESC>:update<CR>
+
+" Record editing history in an undofile for persistent undo between vim
+" sessions. Store these histories in one place for convenient house keeping.
+set undofile
+set undodir=~/.vim/undodir
+

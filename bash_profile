@@ -33,6 +33,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias rm='rm -i'
 
 # set my preferred command statement
 export PS1="\w $ "
@@ -51,6 +52,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Allow Ctrl-S and Ctrl-Q to pass through to VIM
+alias vim='stty -ixon; vim'
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

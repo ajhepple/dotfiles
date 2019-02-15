@@ -1,0 +1,6 @@
+@document domain(shareview.co.uk) {
+    /* Menu item text should be white on hover */
+    .rightSubNav a span.additional-background .menu-item-text:hover {
+        color: white;
+    }
+}
