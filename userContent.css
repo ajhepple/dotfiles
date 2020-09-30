@@ -1,6 +1,51 @@
-@document domain(shareview.co.uk) {
-    /* Menu item text should be white on hover */
+/* Link to this file from inside Firefox's profile folder, inside
+ * a folder named 'chrome'.
+ * You can find the profile folder using Firefox's 
+ * about:profiles page.
+ *
+ * NB Since version 69, the following preference must be set to true:
+ * toolkit.legacyUserProfileCustomizations.stylesheets
+ *
+ * NB This preference must also be set to true for
+ * the @-moz-document 'at' rule to work:
+ * layout.css.moz-document.content.enabled
+ *
+ * See about:config to enable these preferences.
+ *
+ * Other useful references:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@document
+ * https://davidwalsh.name/firefox-user-stylesheet
+ * https://superuser.com/questions/318912
+ */
+
+
+/* Menu item on shareview.co.uk text should be white on hover */
+@-moz-document domain("shareview.co.uk") {
     .rightSubNav a span.additional-background .menu-item-text:hover {
-        color: white;
+        color: white!important;
+    }
+}
+
+/* Chart area on hl.co.uk/shares is cropped */
+@-moz-document domain("www.hl.co.uk") {
+    iframe#charting-frame {
+        width: 85em!important;
+    }
+}
+
+/* Hide the annoying grey lines */
+@-moz-document domain("eqi.co.uk") {
+    #header-wrapperTop {
+        border-bottom: none !important;
+    }
+    .grid-lines-wrapper .grid-lines {
+        width: 0px !important;
+    }
+}
+
+/* Prevent the content of company announcements from being trimmed */
+@-moz-document domain("markets.ft.com") {
+    .mod-detail-app__document {
+        overflow-x: visible !important;
     }
 }

@@ -98,8 +98,8 @@ endif
 " Show line numbers and user relative numbering
 set number relativenumber
 
-" Use Java tab conventions by default
-set tabstop=8 expandtab shiftwidth=4 softtabstop=0 smarttab
+" Use my prefered tab conventions by default
+set tabstop=2 expandtab shiftwidth=2 softtabstop=0 smarttab
 
 " Activate the pathogen script
 execute pathogen#infect()
