@@ -26,13 +26,6 @@
     }
 }
 
-/* Chart area on hl.co.uk/shares is cropped */
-@-moz-document domain("www.hl.co.uk") {
-    iframe#charting-frame {
-        width: 85em!important;
-    }
-}
-
 /* Hide the annoying grey lines */
 @-moz-document domain("eqi.co.uk") {
     #header-wrapperTop {
@@ -49,3 +42,27 @@
         overflow-x: visible !important;
     }
 }
+
+/* Improve the readability of the BBC weather forecast */
+@-moz-document domain("bbc.co.uk") {
+  .wr-day__weather-type-description-container {
+    display: inline !important;
+    float: none !important;
+  }
+  .wr-day--active .wr-day__weather-type-description {
+    box-sizing: content-box !important;
+    padding-top: 0.25em !important;
+  }
+  .wr-day__content__weather-type-description--opaque {
+    border: 0 !important;
+    padding-top: 0.75em !important;
+  }
+}
+
+/* Fix Garmin workout editor */
+@-moz-document domain("connect.garmin.com") {
+  .workout-summary-page-container .repeat-number-of-iterations {
+    min-width: 5em;
+  }
+}
+
